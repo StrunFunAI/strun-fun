@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Session Fix</title>
+</head>
+<body>
+  <h1>Fixing session...</h1>
+  <script>
+    console.log('Current user:', JSON.parse(localStorage.getItem('user') || '{}'));
+    localStorage.clear();
+    console.log('✅ localStorage cleared');
+    setTimeout(() => {
+      window.location.href = '/';
+    }, 1000);
+  </script>
+</body>
+</html>
