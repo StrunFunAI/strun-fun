@@ -1,0 +1,76 @@
+publisher:
+  name: Strun Team
+  website: https://strun.fun
+  email: info@strun.fun
+  support_email: info@strun.fun
+app:
+  name: Strun
+  address: 6bbyB4yeugQSR6oPhgM7jfEJhRtpEAa1LBGYsqpqioit
+  android_package: app.strun.mobile
+  urls:
+    license_url: https://strunfunai.github.io/strun-fun/terms.html
+    copyright_url: https://strunfunai.github.io/strun-fun/terms.html
+    privacy_policy_url: https://strunfunai.github.io/strun-fun/privacy-policy.html
+    website: https://strun.fun
+  media:
+    - purpose: icon
+      uri: ./media/icon-512x512.png
+release:
+  address: 2XNppmesHMW7R1y5wLErxQFLCvmYhQ6LzufJC5XkqB38
+  media:
+    - purpose: icon
+      uri: ./media/icon-512x512.png
+    - purpose: banner
+      uri: ./media/banner-1200x600.png
+    - purpose: featureGraphic
+      uri: ./media/feature-1200x1200.png
+    - purpose: screenshot
+      uri: ./media/screenshot-login.png
+    - purpose: screenshot
+      uri: ./media/screenshot-tasks.png
+    - purpose: screenshot
+      uri: ./media/screenshot-myland.png
+    - purpose: screenshot
+      uri: ./media/screenshot-login.png
+  files:
+    - purpose: install
+      uri: ./files/strun-release.apk
+  catalog:
+    en-US:
+      name: Strun
+      short_description: Run, Own Land, Earn Crypto
+      long_description: |
+        Move. Earn. Own.
+
+        Strun revolutionizes fitness by combining running with blockchain ownership.
+
+        Key Features:
+        - GPS tracking with route mapping
+        - Land NFT minting on Solana
+        - AI-powered location tasks
+        - Instant USDC payments
+        - Social features and leaderboards
+
+        Join the Web3 fitness revolution!
+      new_in_version: Initial release! GPS tracking, Land NFT minting, AI tasks, instant payments.
+      saga_features: Optimized for Solana Saga with native Mobile Wallet Adapter.
+  android_details:
+    cert_fingerprint: ea0d795d7d9c1235c59df089670862d54183dd3f66f85a6d1e44ac717a4272c6
+    min_sdk: 23
+    version: '1.2.0'
+    version_code: 6
+    locales:
+      - en-US
+solana_mobile_dapp_publisher_portal:
+  google_store_package: app.strun.mobile
+  testing_instructions: |
+    Test with any email. Connect Phantom/Solflare wallet (Devnet).
+    Grant location permissions. Test GPS tracking and AI tasks.
+    Contact: info@strun.fun
+  alpha_testers: []
+lastSubmittedVersionOnChain:
+  address: KbrNtar6xasdbXewmR4bd89asKwCqqMWzZozQSfPV9d
+  version_code: 2
+  apk_hash: q/J8eyagFGhnIvEgfPsL9iBNwRioWXcRFjLUDdf5yr8=
+lastUpdatedVersionOnStore:
+  address: KbrNtar6xasdbXewmR4bd89asKwCqqMWzZozQSfPV9d
