@@ -1,175 +1,175 @@
-# 🚀 STRUN Mobile - Hızlı Başlangıç Rehberi
+# 🚀 STRUN Mobile - Quick Start Guide
 
-## 📋 Ön Gereksinimler
+## 📋 Prerequisites
 
-1. **Node.js 18+** kurulu olmalı
+1. **Node.js 18+** must be installed
    ```bash
-   node --version  # v18.0.0 veya üzeri
+   node --version  # v18.0.0 or higher
    ```
 
-2. **Git** kurulu olmalı
+2. **Git** must be installed
 
-3. **Expo CLI** (kurulum aşamasında otomatik yüklenecek)
+3. **Expo CLI** (will auto-install during setup)
 
-4. **iOS Geliştirme** (macOS'ta)
-   - Xcode 14+ kurulu
+4. **iOS Development** (macOS only)
+   - Xcode 14+ installed
    - iOS Simulator
 
-5. **Android Geliştirme**
-   - Android Studio kurulu
+5. **Android Development**
+   - Android Studio installed
    - Android SDK
    - Android Emulator
 
-## 🏁 Kurulum (macOS)
+## 🏁 Setup (macOS)
 
-### 1. Depoyu Klonla
+### 1. Clone Repository
 
 ```bash
 cd ~/Desktop/st2/mobile
 ```
 
-### 2. Setup Script'i Çalıştır
+### 2. Run Setup Script
 
 ```bash
 chmod +x setup.sh
 ./setup.sh
 ```
 
-Script otomatik olarak:
-- ✅ Node.js kontrolü yapar
-- ✅ npm bağımlılıklarını yükler
-- ✅ Expo CLI'yi kurar (yoksa)
+Script automatically:
+- ✅ Checks Node.js
+- ✅ Installs npm dependencies
+- ✅ Installs Expo CLI (if needed)
 
-### 3. Development Server'ı Başlat
+### 3. Start Development Server
 
 ```bash
 npm start
 ```
 
-Tarayıcınızda Expo Dev Tools açılacak.
+Expo Dev Tools will open in your browser.
 
-### 4. Uygulamayı Çalıştır
+### 4. Run Application
 
-#### iOS Simulator'da:
+#### On iOS Simulator:
 ```bash
 npm run ios
 ```
 
-#### Android Emulator'da:
+#### On Android Emulator:
 ```bash
 npm run android
 ```
 
-#### Fiziksel Cihazda:
-1. App Store/Play Store'dan **Expo Go** indir
-2. QR kodu tara
+#### On Physical Device:
+1. Download **Expo Go** from App Store/Play Store
+2. Scan QR code
 
-## 📱 İlk Çalıştırma
+## 📱 First Launch
 
-Uygulama açıldığında:
+When app opens:
 
-1. **Dashboard** ekranını göreceksiniz
-2. Alt menüden **Tasks** sekmesine geçin
-3. Bir görev seçin ve **Kabul Et** butonuna tıklayın
-4. **Camera** sekmesine geçerek fotoğraf çekin
-5. GPS konumunuz otomatik kaydedilecek
-6. Caption ekleyip **Gönder** butonuna basın
-7. **Community** sekmesinden gönderileri görün
+1. You'll see the **Dashboard** screen
+2. Switch to **Tasks** tab from bottom menu
+3. Select a task and tap **Accept**
+4. Go to **Camera** tab and take photo
+5. Your GPS location will be saved automatically
+6. Add caption and tap **Submit**
+7. View submissions in **Community** tab
 
-## 🔧 Geliştirme Modu
+## 🔧 Development Mode
 
 ### Hot Reload
-- Kod değişiklikleriniz otomatik yansır
-- iOS/Android otomatik yenilenir
+- Code changes apply automatically
+- iOS/Android refresh automatically
 
 ### Debug Menu
 - iOS: `Cmd + D`
-- Android: `Cmd + M` veya cihazı sallayın
+- Android: `Cmd + M` or shake device
 
 ### Console Logs
 ```bash
-# Terminalden log'ları izleyin
+# Watch logs from terminal
 npx expo start --clear
 ```
 
-## 🎨 Asset Dosyaları
+## 🎨 Asset Files
 
-Geliştirme için placeholder'lar yeterli ancak production için:
+Placeholders sufficient for development, but for production:
 
 ```bash
 cd assets
-# Logo ve splash ekranı tasarlayın
-# Boyutlar: assets/README.md'de detaylı
+# Design logo and splash screen
+# Sizes: see details in assets/README.md
 ```
 
-## 🔗 Backend Bağlantısı
+## 🔗 Backend Connection
 
-Şu anda mock data kullanılıyor. Backend bağlamak için:
+Currently using mock data. To connect backend:
 
-1. `src/config/api.ts` oluşturun:
+1. Create `src/config/api.ts`:
 ```typescript
 export const API_BASE_URL = 'http://localhost:4000/api';
 ```
 
-2. Her ekranda mock data yerine API çağrıları ekleyin
+2. Add API calls instead of mock data on each screen
 
-## 🐛 Sorun Giderme
+## 🐛 Troubleshooting
 
-### "Module not found" hatası
+### "Module not found" error
 ```bash
 npm install
 npx expo start --clear
 ```
 
-### iOS build hatası
+### iOS build error
 ```bash
 cd ios && pod install
 cd .. && npm run ios
 ```
 
-### Android build hatası
+### Android build error
 ```bash
 cd android
 ./gradlew clean
 cd .. && npm run android
 ```
 
-### Cache temizleme
+### Clear cache
 ```bash
 npx expo start -c
 ```
 
-## 📚 Dökümantasyon
+## 📚 Documentation
 
 - [Expo Docs](https://docs.expo.dev)
 - [React Native Docs](https://reactnative.dev)
 - [React Navigation](https://reactnavigation.org)
 - [Solana Web3.js](https://solana-labs.github.io/solana-web3.js)
 
-## 🎯 Sonraki Adımlar
+## 🎯 Next Steps
 
-1. ✅ Backend API entegrasyonu
-2. ✅ Solana wallet bağlantısı (Phantom)
-3. ✅ GPS doğrulama backend'e bağla
-4. ✅ Community voting sistemi
+1. ✅ Backend API integration
+2. ✅ Solana wallet connection (Phantom)
+3. ✅ Connect GPS verification to backend
+4. ✅ Community voting system
 5. ✅ Push notifications
-6. ✅ Production build ve deploy
+6. ✅ Production build and deployment
 
-## 💡 İpuçları
+## 💡 Tips
 
-- **Development**: `npm start` her zaman açık olsun
-- **VS Code**: React Native extension'ları kurun
-- **Debugging**: React Native Debugger kullanın
-- **Testing**: Fiziksel cihazda test edin (GPS için)
+- **Development**: Keep `npm start` running
+- **VS Code**: Install React Native extensions
+- **Debugging**: Use React Native Debugger
+- **Testing**: Test on physical device (for GPS)
 
-## 🤝 Destek
+## 🤝 Support
 
-Sorun yaşarsanız:
-1. `npm install` tekrar çalıştırın
-2. Cache'i temizleyin (`-c` flag)
-3. Node modules'u silin ve yeniden kurun
-4. Expo doctor çalıştırın: `npx expo-doctor`
+If you encounter issues:
+1. Run `npm install` again
+2. Clear cache (with `-c` flag)
+3. Delete node_modules and reinstall
+4. Run Expo doctor: `npx expo-doctor`
 
 ---
 
-**Başarılı geliştirmeler! 🚀💜**
+**Happy developing! 🚀💜**

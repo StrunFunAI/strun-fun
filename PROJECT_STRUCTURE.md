@@ -1,41 +1,41 @@
-# 📁 STRUN Mobile - Proje Yapısı
+# 📁 STRUN Mobile - Project Structure
 
-## Dizin Ağacı
+## Directory Tree
 
 ```
 mobile/
-├── App.tsx                          # Ana uygulama + navigation
-├── app.json                         # Expo konfigürasyonu
+├── App.tsx                          # Main app + navigation
+├── app.json                         # Expo configuration
 ├── package.json                     # Dependencies
 ├── tsconfig.json                    # TypeScript config
 ├── babel.config.js                  # Babel config
-├── setup.sh                         # Otomatik kurulum script
-├── .gitignore                       # Git ignore kuralları
+├── setup.sh                         # Automatic setup script
+├── .gitignore                       # Git ignore rules
 │
-├── assets/                          # Görseller ve medya
-│   ├── README.md                    # Asset gereksinimleri
+├── assets/                          # Images and media
+│   ├── README.md                    # Asset requirements
 │   ├── icon.png                     # App icon (1024x1024)
 │   ├── splash.png                   # Splash screen (1242x2436)
 │   ├── adaptive-icon.png            # Android icon
 │   └── favicon.png                  # Web favicon
 │
-└── src/                             # Kaynak kodlar
-    └── screens/                     # Tüm ekranlar
-        ├── DashboardScreen.tsx      # Ana sayfa
-        ├── TasksScreen.tsx          # Görev marketplace
-        ├── CameraScreen.tsx         # Kamera + GPS
-        ├── CommunityScreen.tsx      # Sosyal feed
-        ├── ProfileScreen.tsx        # Kullanıcı profili
-        ├── TaskDetailScreen.tsx     # Görev detayı
-        └── ProofUploadScreen.tsx    # Kanıt yükleme
+└── src/                             # Source code
+    └── screens/                     # All screens
+        ├── DashboardScreen.tsx      # Home screen
+        ├── TasksScreen.tsx          # Task marketplace
+        ├── CameraScreen.tsx         # Camera + GPS
+        ├── CommunityScreen.tsx      # Social feed
+        ├── ProfileScreen.tsx        # User profile
+        ├── TaskDetailScreen.tsx     # Task details
+        └── ProofUploadScreen.tsx    # Proof upload
 ```
 
-## 📱 Ekran Detayları
+## 📱 Screen Details
 
 ### DashboardScreen.tsx
-**Amaç**: Ana kontrol merkezi, kullanıcının günlük görevleri ve istatistikleri
+**Purpose**: Main control center, user's daily tasks and statistics
 
-**Bileşenler**:
+**Components**:
 - Header (user stats, level, XP bar)
 - Streak display
 - Daily tasks list
@@ -51,19 +51,19 @@ mobile/
 }
 ```
 
-**Navigasyon**: TaskDetail, ProofUpload
+**Navigation**: TaskDetail, ProofUpload
 
 ---
 
 ### TasksScreen.tsx
-**Amaç**: Görev keşfi ve marketplace
+**Purpose**: Task discovery and marketplace
 
 **Tabs**:
-1. **Marketplace** - Sponsorlu görevler
-2. **My Tasks** - Kabul edilen görevler
-3. **Create** - Yeni görev oluştur
+1. **Marketplace** - Sponsored tasks
+2. **My Tasks** - Accepted tasks
+3. **Create** - Create new task
 
-**Bileşenler**:
+**Components**:
 - Search bar
 - Filter buttons
 - Task cards (sponsor, distance, reward, slots)
@@ -80,10 +80,10 @@ mobile/
 ---
 
 ### CameraScreen.tsx
-**Amaç**: Fotoğraf/video çekimi + GPS tracking
+**Purpose**: Photo/video capture + GPS tracking
 
-**Özellikler**:
-- expo-camera entegrasyonu
+**Features**:
+- expo-camera integration
 - Front/back camera toggle
 - Photo/video capture
 - GPS location capture
@@ -91,10 +91,10 @@ mobile/
 
 **Flow**:
 1. Permission check (camera + location)
-2. Camera açılır
-3. Kullanıcı fotoğraf çeker veya basılı tutarak video çeker
-4. GPS koordinatları otomatik kaydedilir
-5. ProofUpload ekranına yönlendirilir
+2. Camera opens
+3. User takes photo or holds to record video
+4. GPS coordinates auto-recorded
+5. Navigate to ProofUpload screen
 
 **State**:
 ```typescript
@@ -108,10 +108,10 @@ mobile/
 ---
 
 ### CommunityScreen.tsx
-**Amaç**: Sosyal feed (TikTok/Instagram benzeri)
+**Purpose**: Social feed (TikTok/Instagram style)
 
-**Bileşenler**:
-- Filter tabs (Tümü, Trend, Fotoğraf, Video, Fitness)
+**Components**:
+- Filter tabs (All, Trending, Photos, Videos, Fitness)
 - Post cards:
   - User avatar + name
   - Task badge
@@ -131,9 +131,9 @@ mobile/
 ---
 
 ### ProfileScreen.tsx
-**Amaç**: X/TikTok tarzı kullanıcı profili
+**Purpose**: X/TikTok-style user profile
 
-**Bölümler**:
+**Sections**:
 - Cover photo + avatar
 - User info (name, username, bio)
 - Stats (level, tasks completed, SOL earned)
@@ -150,9 +150,9 @@ mobile/
 ---
 
 ### TaskDetailScreen.tsx
-**Amaç**: Görev detay sayfası
+**Purpose**: Task detail page
 
-**Bileşenler**:
+**Components**:
 - Header image/map
 - Title + description
 - Meta info (location, duration)
@@ -169,9 +169,9 @@ route.params.task: Task
 ---
 
 ### ProofUploadScreen.tsx
-**Amaç**: Kanıt yükleme ve submit
+**Purpose**: Proof upload and submit
 
-**Bileşenler**:
+**Components**:
 - Media preview (photo/video)
 - Location verification badge
 - Caption input
@@ -189,18 +189,18 @@ route.params: {
 ```
 
 **Flow**:
-1. Medya önizlemesi gösterilir
-2. GPS "Doğrulandı" badge'i
-3. Kullanıcı caption yazar
-4. Submit tıklanır
-5. Backend'e gönderilir
-6. Success → Community feed'e yönlendir
+1. Media preview shown
+2. GPS "Verified" badge
+3. User writes caption
+4. Submit clicked
+5. Sent to backend
+6. Success → redirect to community feed
 
 ---
 
-## 🎨 Stil Sistemi
+## 🎨 Design System
 
-### Renkler
+### Colors
 ```typescript
 const colors = {
   background: '#111827',      // Dark background
@@ -218,7 +218,7 @@ const colors = {
 };
 ```
 
-### Tipografi
+### Typography
 ```typescript
 const typography = {
   h1: { fontSize: 28, fontWeight: 'bold' },
@@ -281,7 +281,7 @@ type RootStackParamList = {
 
 ---
 
-## 🔧 Konfigürasyon
+## 🔧 Configuration
 
 ### app.json
 - App name, slug, version
@@ -312,7 +312,7 @@ type RootStackParamList = {
 - @expo/vector-icons (Ionicons)
 - expo-linear-gradient
 
-### Blockchain (gelecek)
+### Blockchain (future)
 - @solana/web3.js
 - @solana-mobile/mobile-wallet-adapter-*
 
@@ -333,7 +333,7 @@ expo build:ios    # iOS IPA
 expo build:android # Android APK/AAB
 ```
 
-### EAS Build (önerilen)
+### EAS Build (recommended)
 ```bash
 eas build --platform ios
 eas build --platform android
@@ -341,13 +341,13 @@ eas build --platform android
 
 ---
 
-## 📝 Notlar
+## 📝 Notes
 
-- Tüm ekranlar dark mode'da tasarlanmıştır
-- GPS permission'ları her platform için ayrı yapılandırılmıştır
-- Mock data kullanılmaktadır (backend entegrasyonu gerekiyor)
-- TypeScript strict mode aktif
-- Expo managed workflow kullanılmaktadır
+- All screens designed in dark mode
+- GPS permissions configured separately per platform
+- Currently using mock data (backend integration needed)
+- TypeScript strict mode active
+- Using Expo managed workflow
 
 ---
 
