@@ -1,147 +1,109 @@
-# STRUN Mobile
+STRUN MobileA React Native Expo app for location-based task completion and proof submission.Features Location-based task marketplace
+ Photo/video proof submission  
+ Community feed with voting
+ SOL rewards via Solana integration
+ XP and leveling system
 
-A React Native Expo app for location-based task completion and proof submission.
+Developmentbash
 
-## Features
-
-- 🏃‍♂️ Location-based task marketplace
-- 📸 Photo/video proof submission  
-- 🏆 Community feed with voting
-- 💰 SOL rewards via Solana integration
-- 🎯 XP and leveling system
-
-## Development
-
-```bash
 npm install
 npm run web      # Start web development server
 npm run android  # Start Android development
 npm run ios      # Start iOS development
-```
 
-## Deployment
+DeploymentThis project is configured for Vercel deployment with Expo Web.AI task generation
+Nearby tasks map
 
-This project is configured for Vercel deployment with Expo Web.
-- AI görev üretimi
-- Yakındaki görevler haritası
+2. Tasks (Marketplace)Sponsored tasks
+Task filtering
+Task creation
+Accepted tasks
 
-### 2. Tasks (Marketplace)
-- Sponsorlu görevler
-- Görev filtreleme
-- Görev oluşturma
-- Kabul edilen görevler
+3. CameraTake photos
+Record video (max 30 seconds)
+GPS tracking
+Real-time location verification
 
-### 3. Camera
-- Fotoğraf çekme
-- Video kaydetme (max 30 sn)
-- GPS tracking
-- Gerçek zamanlı konum doğrulama
+4. Community FeedTikTok-style vertical feed
+Task proofs
+Upvote/downvote system
+Comments and sharing
 
-### 4. Community Feed
-- TikTok tarzı vertical feed
-- Görev kanıtları
-- Upvote/downvote sistemi
-- Yorum ve paylaşım
+5. ProfileX/TikTok-style profile
+Stats & badges
+Post grid
+Solana wallet integration
 
-### 5. Profile
-- X/TikTok tarzı profil
-- Stats & badges
-- Post grid
-- Solana wallet entegrasyonu
+ SetupRequirementsNode.js 18+
+Expo CLI
+iOS Simulator or Android Emulator
+(Optional) Physical device
 
-## 🚀 Kurulum
+Stepsbash
 
-### Gereksinimler
-
-- Node.js 18+
-- Expo CLI
-- iOS Simulator veya Android Emulator
-- (Opsiyonel) Fiziksel cihaz
-
-### Adımlar
-
-```bash
-# Proje klasörüne git
+# Navigate to project folder
 cd mobile
 
-# Bağımlılıkları yükle
+# Install dependencies
 npm install
 
-# Expo development server'ı başlat
+# Start Expo development server
 npm start
 
-# iOS simulator'da çalıştır
+# Run on iOS simulator
 npm run ios
 
-# Android emulator'da çalıştır
+# Run on Android emulator
 npm run android
-```
 
-## 📱 Platform Özellikleri
+ Platform FeaturesiOSCamera & Photo Library permissions
+Location (WhenInUse & Always) permissions
+Solana Mobile Wallet Adapter support
 
-### iOS
-- Camera & Photo Library izinleri
-- Location (WhenInUse & Always) izinleri
-- Solana Mobile Wallet Adapter desteği
+AndroidCamera permission
+Fine & Coarse Location permissions
+Storage permissions
+Phantom Mobile support
 
-### Android
-- Camera izni
-- Fine & Coarse Location izinleri
-- Storage izinleri
-- Phantom Mobile desteği
+ Technology StackFramework: React Native (Expo)
+Navigation: React Navigation
+State: Zustand (optional)
+Blockchain: Solana Web3.js
+Camera: expo-camera
+Location: expo-location
+Maps: react-native-maps
+Styling: StyleSheet + LinearGradient
 
-## 🎯 Teknoloji Stack
+ Proof Upload FlowUser accepts a task
+Camera opens (GPS active)
+Takes photo/video
+GPS coordinates are automatically attached
+Adds caption
+Submits → Sent to backend
+EXIF + GPS verification
+Community voting (24 hours)
+Reward distribution
 
-- **Framework**: React Native (Expo)
-- **Navigation**: React Navigation
-- **State**: Zustand (opsiyonel)
-- **Blockchain**: Solana Web3.js
-- **Camera**: expo-camera
-- **Location**: expo-location
-- **Maps**: react-native-maps
-- **Styling**: StyleSheet + LinearGradient
+ SecurityGPS coordinates are stripped from EXIF data
+Server-side verification (backend)
+AI-powered content moderation
+Community voting system
 
-## 📸 Proof Upload Flow
+ Design SystemColorsBackground: #111827 (Dark)
+Cards: #1F2937
+Primary: #8B5CF6 (Purple)
+Secondary: #EC4899 (Pink)
+Success: #10B981 (Green)
+Warning: #F59E0B (Orange)
+Text Primary: #FFFFFF
+Text Secondary: #9CA3AF
 
-1. Kullanıcı görevi kabul eder
-2. Kamera açılır (GPS aktif)
-3. Fotoğraf/video çeker
-4. GPS koordinatları otomatik eklenir
-5. Caption ekler
-6. Submit → Backend'e gider
-7. EXIF + GPS doğrulama
-8. Community voting (24 saat)
-9. Ödül dağıtımı
+TypographyHeading: Bold 24-28px
+Body: Regular 14-16px
+Caption: Regular 12px
 
-## 🔐 Güvenlik
+ Backend IntegrationBackend API endpoints:typescript
 
-- GPS koordinatları EXIF verisinden çıkarılır
-- Server-side doğrulama (backend)
-- AI destekli içerik moderasyonu
-- Community voting sistemi
-
-## 🎨 Design System
-
-### Renkler
-- Background: `#111827` (Dark)
-- Cards: `#1F2937`
-- Primary: `#8B5CF6` (Purple)
-- Secondary: `#EC4899` (Pink)
-- Success: `#10B981` (Green)
-- Warning: `#F59E0B` (Orange)
-- Text Primary: `#FFFFFF`
-- Text Secondary: `#9CA3AF`
-
-### Typography
-- Heading: Bold 24-28px
-- Body: Regular 14-16px
-- Caption: Regular 12px
-
-## 🔗 Backend Integration
-
-Backend API endpoints:
-
-```typescript
 // Tasks
 GET    /api/tasks              // Marketplace
 POST   /api/tasks              // Create task
@@ -157,46 +119,32 @@ POST   /api/proofs/:id/vote    // Vote on proof
 GET    /api/user/profile       // User profile
 GET    /api/user/stats         // User stats
 POST   /api/user/wallet        // Connect wallet
-```
 
-## 🌟 Gelecek Özellikler
+ Future FeaturesSolana Mobile Stack integration
+NFT badges (on-chain)
+Land ownership system
+x402 rent payments
+AI task generator integration
+Video editing tools
+AR filters
+Social features (DM, groups)
+Referral system
+Premium subscriptions
 
-- [ ] Solana Mobile Stack entegrasyonu
-- [ ] NFT rozetler (on-chain)
-- [ ] Land ownership sistemi
-- [ ] x402 rent payments
-- [ ] AI task generator integration
-- [ ] Video editing tools
-- [ ] AR filters
-- [ ] Social features (DM, groups)
-- [ ] Referral system
-- [ ] Premium subscriptions
+ NotesThis project is built with Expo
+expo-dev-client is recommended for development
+Use EAS Build for production builds
+Mobile wallet required for Solana integration
 
-## 📝 Notlar
+ ContributingFork the repo
+Create a feature branch (git checkout -b feature/amazing)
+Commit your changes (git commit -m 'Add amazing feature')
+Push to the branch (git push origin feature/amazing)
+Open a Pull Request
 
-- Bu proje Expo ile geliştirilmiştir
-- Development için expo-dev-client önerilir
-- Production build için EAS Build kullanın
-- Solana entegrasyonu için mobil cüzdan gereklidir
+ LicenseMIT License LinksSolana Docs
+Expo Docs
+React Navigation
 
-## 🤝 Katkıda Bulunma
+Made with  by STRUN Team
 
-1. Fork yapın
-2. Feature branch oluşturun (`git checkout -b feature/amazing`)
-3. Commit yapın (`git commit -m 'Add amazing feature'`)
-4. Push yapın (`git push origin feature/amazing`)
-5. Pull Request açın
-
-## 📄 Lisans
-
-MIT License
-
-## 🔗 Bağlantılar
-
-- [Solana Docs](https://docs.solana.com)
-- [Expo Docs](https://docs.expo.dev)
-- [React Navigation](https://reactnavigation.org)
-
----
-
-**Made with 💜 by STRUN Team**
