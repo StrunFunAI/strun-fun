@@ -1,0 +1,64 @@
+{
+  "expo": {
+    "name": "STRUN",
+    "slug": "strun-mobile",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#111827"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.strun.mobile",
+      "scheme": "strun",
+      "infoPlist": {
+        "NSCameraUsageDescription": "STRUN needs camera access to capture task proofs",
+        "NSPhotoLibraryUsageDescription": "STRUN needs photo library access to select images",
+        "NSLocationWhenInUseUsageDescription": "STRUN needs location access to verify task completion",
+        "NSLocationAlwaysUsageDescription": "STRUN needs location access to track running activities"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#111827"
+      },
+      "package": "com.strun.mobile",
+      "scheme": "strun",
+      "permissions": [
+        "CAMERA",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE"
+      ]
+    },
+    "web": {
+      "bundler": "webpack",
+      "build": {
+        "output": "web-build"
+      }
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow STRUN to access your camera to capture task proofs"
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow STRUN to use your location to verify task completion"
+        }
+      ]
+    ]
+  }
+}
