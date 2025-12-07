@@ -41,7 +41,7 @@
       ]
     },
     "web": {
-      "bundler": "webpack",
+      "bundler": "metro",
       "build": {
         "output": "web-build"
       }
