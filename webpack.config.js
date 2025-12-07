@@ -12,8 +12,12 @@ module.exports = async function (env, argv) {
     argv
   );
 
-  // Disable cache to prevent CRC errors
+  // Disable cache and snapshot compression to prevent CRC errors
   config.cache = false;
+  config.snapshot = {
+    managedPaths: [],
+    immutablePaths: [],
+  };
 
   // Crypto polyfill for web
   config.resolve.fallback = {
