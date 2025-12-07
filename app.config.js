@@ -2,7 +2,7 @@ export default {
   expo: {
     name: "STRUN",
     slug: "strun-mobile",
-    version: "1.0.0",
+    version: "1.2.0",
     orientation: "portrait",
     icon: "./assets/icon.png",
     userInterfaceStyle: "dark",
@@ -53,6 +53,9 @@ export default {
     ],
     // ✅ Environment variables için extra config
     extra: {
+      eas: {
+        projectId: "db060447-cc2e-48a8-af85-646cf7084f70"
+      },
       supabaseUrl: process.env.EXPO_PUBLIC_SUPABASE_URL || "https://yspbmyvazyroblgfuxuj.supabase.co",
       supabaseAnonKey: process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY || "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlzcGJteXZhenlyb2JsZ2Z1eHVqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjQ4NjQxODMsImV4cCI6MjA4MDQ0MDE4M30.Vs46lekcDOT61qoSg-j0Qh9yx9e-SkO9326Qelc2S28",
       geminiApiKey: process.env.EXPO_PUBLIC_GEMINI_API_KEY,

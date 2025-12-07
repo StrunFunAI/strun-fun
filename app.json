@@ -2,7 +2,7 @@
   "expo": {
     "name": "STRUN",
     "slug": "strun-mobile",
-    "version": "1.0.0",
+    "version": "1.2.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "dark",
@@ -59,6 +59,11 @@
           "locationAlwaysAndWhenInUsePermission": "Allow STRUN to use your location to verify task completion"
         }
       ]
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "db060447-cc2e-48a8-af85-646cf7084f70"
+      }
+    }
   }
 }
