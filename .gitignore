@@ -27,6 +27,9 @@ web-build/
 # Vercel
 .vercel/
 
+# Webpack (causes CRC errors)
+webpack.config.js
+
 # Environment
 .env
 .env.local
