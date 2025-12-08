@@ -139,14 +139,14 @@ export default function LoginScreen() {
           By signing in, you agree to our{' '}
           <Text
             style={styles.termsLink}
-            onPress={() => Linking.openURL('http://localhost:3000/terms.html')}
+            onPress={() => Linking.openURL('https://strun.fun/terms')}
           >
             Terms of Service
           </Text>
           {' '}and{' '}
           <Text
             style={styles.termsLink}
-            onPress={() => Linking.openURL('http://localhost:3000/privacy-policy.html')}
+            onPress={() => Linking.openURL('https://strun.fun/privacy')}
           >
             Privacy Policy
           </Text>
