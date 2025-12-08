@@ -8,9 +8,9 @@ app:
   address: 6bbyB4yeugQSR6oPhgM7jfEJhRtpEAa1LBGYsqpqioit
   android_package: app.strun.mobile
   urls:
-    license_url: https://strunfunai.github.io/strun-fun/terms.html
-    copyright_url: https://strunfunai.github.io/strun-fun/terms.html
-    privacy_policy_url: https://strunfunai.github.io/strun-fun/privacy-policy.html
+    license_url: https://strun.fun/terms
+    copyright_url: https://strun.fun/terms
+    privacy_policy_url: https://strun.fun/privacy
     website: https://strun.fun
   media:
     - purpose: icon
@@ -52,13 +52,13 @@ release:
         - Social features and leaderboards
 
         Join the Web3 fitness revolution!
-      new_in_version: Initial release! GPS tracking, Land NFT minting, AI tasks, instant payments.
+      new_in_version: v1.2.0 Update - Enhanced Google OAuth authentication, Updated Terms & Privacy links to strun.fun domain.
       saga_features: Optimized for Solana Saga with native Mobile Wallet Adapter.
   android_details:
     cert_fingerprint: ea0d795d7d9c1235c59df089670862d54183dd3f66f85a6d1e44ac717a4272c6
     min_sdk: 23
     version: '1.2.0'
-    version_code: 6
+    version_code: 7
     locales:
       - en-US
 solana_mobile_dapp_publisher_portal:
