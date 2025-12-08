@@ -79,7 +79,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const googleAuth = Platform.OS !== 'web' ? Google.useAuthRequest({
     clientId: '906127648686-0dfdvspkucf3lqe53dng0b67g5qf3e33.apps.googleusercontent.com',
     iosClientId: '906127648686-0dfdvspkucf3lqe53dng0b67g5qf3e33.apps.googleusercontent.com',
-    androidClientId: '906127648686-0dfdvspkucf3lqe53dng0b67g5qf3e33.apps.googleusercontent.com',
+    androidClientId: '465218056709-9i8otl1o2hp1cb7p9fi7tectsktlhne6.apps.googleusercontent.com',
   }) : [null, null, null];
 
   const [request, response, promptAsync] = googleAuth;
