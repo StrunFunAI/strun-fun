@@ -1,7 +1,7 @@
 # STRUN - Solana dApp Store Submission Complete
 
-**Submission Date:** December 8, 2025
-**Version:** 1.2.0 (Version Code: 6)
+**Submission Date:** December 8, 2025 | **Updated:** December 9, 2025
+**Version:** 1.2.0 (Version Code: 14)
 
 ## ✅ Submission Checklist
 
@@ -15,12 +15,12 @@
 - ✅ Videos (optional): Included
 
 ### APK & Build
-- ✅ Release Build: strun-release.apk (4.6 MB)
+- ✅ Release Build: strun-v1.2.0.apk (Latest from EAS Build)
 - ✅ Signed with unique key: ea0d795d7d9c1235c59df089670862d54183dd3f66f85a6d1e44ac717a4272c6
-- ✅ Android Package: app.strun.mobile
-- ✅ Min SDK: 23
+- ✅ Android Package: com.strun.mobile
+- ✅ Min SDK: 24
 - ✅ Target SDK: 34
-- ✅ APK Hash: q/J8eyagFGhnIvEgfPsL9iBNwRioWXcRFjLUDdf5yr8=
+- ✅ Build System: EAS Build (Expo)
 
 ### Configuration
 - ✅ config.yaml: Complete and validated

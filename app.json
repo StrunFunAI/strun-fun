@@ -17,7 +17,6 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.strun.mobile",
-      "scheme": "strun",
       "infoPlist": {
         "NSCameraUsageDescription": "STRUN needs camera access to capture task proofs",
         "NSPhotoLibraryUsageDescription": "STRUN needs photo library access to select images",
@@ -31,7 +30,6 @@
         "backgroundColor": "#111827"
       },
       "package": "com.strun.mobile",
-      "scheme": "strun",
       "permissions": [
         "CAMERA",
         "ACCESS_FINE_LOCATION",
