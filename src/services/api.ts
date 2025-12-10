@@ -4,7 +4,7 @@ import { supabase } from '../lib/supabase';
 const API_URL = process.env.REACT_APP_API_URL || 
   (typeof window !== 'undefined' && window.location.hostname === 'localhost' 
     ? 'http://localhost:3000/api'
-    : 'https://strun-backend.onrender.com/api');  // TODO: Update with your actual backend URL
+    : 'https://strun-backend-production.up.railway.app/api');
 
 // For debugging connection issues:
 console.log('🌐 API URL:', API_URL);
