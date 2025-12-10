@@ -344,7 +344,7 @@ export default function App() {
   );
 
   return Platform.OS === 'web' ? (
-    <GoogleOAuthProvider clientId="906127648686-0dfdvspkucf3lqe53dng0b67g5qf3e33.apps.googleusercontent.com">
+    <GoogleOAuthProvider clientId="465218056709-1mrhjd032sej5a470n0c03bsd6f6f69t.apps.googleusercontent.com">
       <AppContent />
     </GoogleOAuthProvider>
   ) : (

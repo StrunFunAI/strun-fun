@@ -77,8 +77,8 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   // Native için OAuth
   const googleAuth = Platform.OS !== 'web' ? Google.useAuthRequest({
-    clientId: '906127648686-0dfdvspkucf3lqe53dng0b67g5qf3e33.apps.googleusercontent.com',
-    iosClientId: '906127648686-0dfdvspkucf3lqe53dng0b67g5qf3e33.apps.googleusercontent.com',
+    clientId: '465218056709-1mrhjd032sej5a470n0c03bsd6f6f69t.apps.googleusercontent.com',
+    iosClientId: '465218056709-1mrhjd032sej5a470n0c03bsd6f6f69t.apps.googleusercontent.com',
     androidClientId: '465218056709-9i8otl1o2hp1cb7p9fi7tectsktlhne6.apps.googleusercontent.com',
   }) : [null, null, null];
 
