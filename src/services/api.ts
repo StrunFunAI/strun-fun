@@ -1,8 +1,10 @@
 import { supabase } from '../lib/supabase';
 
-// API URL - use localhost for Expo web development
-// For physical device, update to your machine's IP: http://192.168.x.x:3000/api
-const API_URL = 'http://localhost:3000/api';
+// API URL - production backend
+const API_URL = process.env.REACT_APP_API_URL || 
+  (typeof window !== 'undefined' && window.location.hostname === 'localhost' 
+    ? 'http://localhost:3000/api'
+    : 'https://strun-backend.onrender.com/api');  // TODO: Update with your actual backend URL
 
 // For debugging connection issues:
 console.log('🌐 API URL:', API_URL);
